@@ -2,35 +2,44 @@
     <head>
         <title>Solar System</title>
         <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+        <script src="aframe-particle-system-component.js"></script>
     </head>
     <body>
         <a-scene>
             <a-asset>
-                <a-asset-item id="tree-obj" src="/path/to/tree.obj"></a-asset-item>
-                <a-asset-item id="tree-mtl" src="/path/to/tree.mtl"></a-asset-item>
-                <img id="galaxy" src="galaxy.jpg"/>
-                <img id="mercury" src='mercury.jpg' />
-                <img id="venus" src='venus.png'/>
-                <img id="earth" src='earth.jpg'/>
-                <img id="mars" src='mars.jpg'/>
-                <img id="jupiter" src='jupiter.png'/>
-                <img id="saturn" src ='saturn.png'/>
-                <img id="uranus" src='uranus.jpg'/>
-                <img id="neptune" src='neptune.png'/>
-                <img id="pluto" src='pluto.png'/>
+                <img id="galaxy" src="assets/galaxy.jpg"/>
+                <img id="mercury" src='assets/mercury.jpg' />
+                <img id="venus" src='assets/venus.png'/>
+                <img id="earth" src='assets/earth.jpg'/>
+                <img id="mars" src='assets/mars.jpg'/>
+                <img id="jupiter" src='assets/jupiter.png'/>
+                <img id="saturn" src ='assets/saturn.png'/>
+                <img id="uranus" src='assets/uranus.jpg'/>
+                <img id="neptune" src='assets/neptune.png'/>
+                <img id="pluto" src='assets/pluto.png'/>
+                <img id="star" src='assets/stars.png'/>
+                <img id="star1" src='assets/star.png'/>
+                <img id="star2" src='assets/star.gif'/>
             </a-asset>
             <!--background-->
             <a-sky src=#galaxy></a-sky>
+            <!--stars-->
+            <a-entity position="0 2.25 -5" particle-system="preset: dust; size: 0.5; particleCount: 5000; color: #FFFFFF , #6C938F"></a-entity>
+            <a-entity position="0 2.25 5" particle-system="preset: dust; size: 0.5; particleCount: 5000; color: #FFFFFF , #6C938F "></a-entity>
+            <a-entity position="-2 2.25 0" particle-system="preset: dust; size: 0.5; particleCount: 5000; color: #FFFFFF , #6C938F "></a-entity>
+            <a-entity position="2 2.25 0" particle-system="preset: dust; size: 0.5; particleCount: 5000; color: #FFFFFF , #6C938F "></a-entity>
+            
             <!--mercury -->
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-            <a-sphere material= "src: #mercury" radius="0.5" position="-38 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            <a-sphere material= "src: #mercury" radius="1" position="-38 1 -20" rotation="0 45 0">
+                <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite" ></a-animation>
             </a-sphere>
             </a-entity>
             
@@ -38,12 +47,13 @@
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-            <a-sphere material= "src: #venus" radius="1.125" position="-29 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            <a-sphere material= "src: #venus" radius="2.25" position="-29 1 -20" rotation="0 45 0">
+                <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-sphere>
             </a-entity>
 
@@ -52,12 +62,13 @@
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-            <a-sphere material= "src: #earth" radius="1.25" position="-20 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            <a-sphere material= "src: #earth" radius="2.5" position="-20 1 -20" rotation="0 45 0">
+                <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-sphere>
             </a-entity>
 
@@ -66,12 +77,13 @@
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-            <a-sphere material= "src: #mars" radius="0.625" position="-5 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            <a-sphere material= "src: #mars" radius="1.25" position="-5 1 -20" rotation="0 45 0">
+                <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-sphere>
             </a-entity>
 
@@ -80,12 +92,13 @@
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-            <a-sphere material= "src: #jupiter" radius="14" position="110 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            <a-sphere material= "src: #jupiter" radius="28" position="110 1 -20" rotation="0 45 0">
+                <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-sphere>
             </a-entity>
 
@@ -94,12 +107,13 @@
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-            <a-sphere material= "src: #saturn" radius="11.875" position="238 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            <a-sphere material= "src: #saturn" radius="23.75" position="238 1 -20" rotation="0 45 0">
+                <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-sphere>
             </a-entity>
 
@@ -108,12 +122,13 @@
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-            <a-sphere material= "src: #uranus" radius="5" position="526 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            <a-sphere material= "src: #uranus" radius="10" position="526 1 -20" rotation="0 45 0">
+                <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-sphere>
             </a-entity>
 
@@ -122,12 +137,13 @@
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation>
-            <a-sphere material= "src: #neptune" radius="4.875" position="853 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+            <a-sphere material= "src: #neptune" radius="9.75" position="853 1 -20" rotation="0 45 0">
+                <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
             </a-sphere>
             </a-entity>
 
@@ -136,18 +152,16 @@
             <a-entity>
               <a-entity position="0 0 0"></a-entity>
               <a-animation attribute="rotation"
-               dur="10000"
+               dur="12000"
+               easing="linear"
                fill="forwards"
                to="0 360 0"
-               repeat="indefinite"></a-animation>
-                </a-entity>
-
-               
-            <a-sphere material= "src: #pluto" radius="0.25" position="1155 1 -20" rotation="0 45 0">
-                <a-animation attribute="rotation" dur="1000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
-            </a-sphere>
-              <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
-
+               repeat="indefinite"></a-animation>  
+                <a-sphere material= "src: #pluto" radius="0.5" position="1155 1 -20" rotation="0 45 0">
+                    <a-animation attribute="rotation" dur="3000" easing="linear" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+                </a-sphere>
+            </a-entity>
+            
         </a-scene>
     </body>
 </html>
